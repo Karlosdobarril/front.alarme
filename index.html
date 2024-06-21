@@ -6,22 +6,30 @@
     <title>Alarme</title>
     <style>
         body, html {
-            margin: 0px;
-            width: 25%;
-            height: 100%;
+            margin: 0;
+            padding: 20px; /* Espaçamento de 20px das paredes */
+            box-sizing: border-box; /* Inclui o padding na largura e altura total */
+            width: calc(100% - 40px); /* Compensa o padding */
+            height: calc(100% - 40px); /* Compensa o padding */
+            display: flex;
+            background-color: #f0f0f0;
+            position: relative;
+        }
+
+        .opcoes {
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            margin-top: 40px; /* Distância maior do topo */
+            justify-content: flex-start; /* Alinha os itens ao topo */
             align-items: center;
-            background-color: #f0f0f0;
         }
 
         .opcao {
-            font-size: 25px;
+            margin-bottom: 10px; /* Espaçamento entre os quadrados da esquerda */
+            font-size: 40px;
             width: 200px;
             height: 200px;
             background-color: #000000;
-            margin-bottom: 10px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -29,16 +37,28 @@
             text-align: center;
         }
 
-        .opcao:last-child {
-            margin-bottom: 0;
+        .mapaCasa {
+            font-size: 40px;
+            width: calc(100% - 220px); /* Compensa a largura dos quadrados da esquerda e o espaçamento */
+            height: calc(100% - 50px); /* Compensa o padding vertical */
+            background-color: #000000;
+            color: #f0f0f0;
+            position: absolute;
+            top: 40px; /* Mantém 20px do topo */
+            left: 240px; /* Mantém 20px de distância dos quadrados da esquerda */
         }
     </style>
 </head>
 <body>
-    <div class="opcao">Histórico</div>
-    <div class="opcao">Cartão</div>
-    <div class="opcao">Senha</div>
-    <div class="opcao">Agendar</div>
-    <div class="opcao">Usuários</div>
+    <div class="opcoes">
+       <a href="historico.html"><div class="opcao">Histórico</div></a> 
+        <div class="opcao">Cartão</div>
+        <div class="opcao">Senha</div>
+        <div class="opcao">Agendar</div>
+        <div class="opcao">Usuários</div>
+    </div>
+    <div class="mapaCasa">Planta da Casa</div>
+
+
 </body>
 </html>
